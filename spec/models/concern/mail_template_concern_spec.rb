@@ -7,24 +7,24 @@ describe MailTemplateConcern do
 
   shared_examples "can replace tokens in template" do
     describe 'with no token to replace' do
-      let(:template) { '[TPS] rien à remplacer' }
+      let(:template) { '[demarches-publiques.fr] rien à remplacer' }
       it do
-        is_expected.to eq("[TPS] rien à remplacer")
+        is_expected.to eq("[demarches-publiques.fr] rien à remplacer")
       end
     end
 
     describe 'with one token to replace' do
-      let(:template) { '[TPS] Dossier : --numero_dossier--' }
+      let(:template) { '[demarches-publiques.fr] Dossier : --numero_dossier--' }
       it do
-        is_expected.to eq("[TPS] Dossier : #{dossier.id}")
+        is_expected.to eq("[demarches-publiques.fr] Dossier : #{dossier.id}")
       end
     end
 
     describe 'with multiples tokens to replace' do
-      let(:template) { '[TPS] --numero_dossier-- --libelle_procedure-- --lien_dossier--' }
+      let(:template) { '[demarches-publiques.fr] --numero_dossier-- --libelle_procedure-- --lien_dossier--' }
       it do
         expected =
-          "[TPS] #{dossier.id} #{dossier.procedure.libelle} " +
+          "[demarches-publiques.fr] #{dossier.id} #{dossier.procedure.libelle} " +
           "<a target=\"_blank\" href=\"http://localhost:3000/users/dossiers/#{dossier.id}/recapitulatif\">http://localhost:3000/users/dossiers/#{dossier.id}/recapitulatif</a>"
 
         is_expected.to eq(expected)

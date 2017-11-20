@@ -2,13 +2,13 @@ class InviteMailer < ApplicationMailer
   def invite_user invite
     vars_mailer invite
 
-    send_mail invite.email, "TPS - Participez à l'élaboration d'un dossier", invite.email_sender unless invite.user.nil?
+    send_mail invite.email, "demarches-publiques.fr - Participez à l'élaboration d'un dossier", invite.email_sender unless invite.user.nil?
   end
 
   def invite_guest invite
     vars_mailer invite
 
-    send_mail invite.email, "Invitation - #{invite.email_sender} vous invite à consulter un dossier sur la plateforme TPS", invite.email_sender
+    send_mail invite.email, "Invitation - #{invite.email_sender} vous invite à consulter un dossier sur demarches-publiques.fr", invite.email_sender
   end
 
   private

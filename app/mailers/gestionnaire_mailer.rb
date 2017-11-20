@@ -2,12 +2,12 @@ class GestionnaireMailer < ApplicationMailer
   layout 'mailers/layout'
 
   def new_gestionnaire email, password
-    send_mail email, password, "Vous avez été nommé accompagnateur sur la plateforme TPS"
+    send_mail email, password, "Vous avez été nommé accompagnateur sur demarches-publiques.fr"
   end
 
   def last_week_overview(gestionnaire, overview)
     headers['X-mailjet-campaign'] = 'last_week_overview'
-    send_mail gestionnaire.email, overview, 'Vos activités sur TPS'
+    send_mail gestionnaire.email, overview, 'Vos activités sur demarches-publiques.fr'
   end
 
   private

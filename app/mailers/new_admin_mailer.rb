@@ -3,6 +3,6 @@ class NewAdminMailer < ApplicationMailer
     @admin = admin
 
     mail(to: 'tech@tps.apientreprise.fr',
-         subject: "Création d'un compte Admin TPS")
+         subject: "Création d'un compte Admin demarches-publiques.fr")
   end
 end
