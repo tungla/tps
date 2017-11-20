@@ -30,7 +30,7 @@ describe Commentaire do
       let(:user_invite) { create(:user) }
 
       before do
-        FactoryGirl.create(:invite_user, email: "invite@tps.apientreprise.fr", dossier: dossier, user: user_invite)
+        FactoryGirl.create(:invite_user, email: "invite@demarches-publiques.fr", dossier: dossier, user: user_invite)
       end
 
       it "calls notify_gestionnaires" do
@@ -55,7 +55,7 @@ describe Commentaire do
         expect(commentaire).not_to receive(:notify_user)
         expect(commentaire).not_to receive(:notify_gestionnaires)
 
-        commentaire.email = "contact@tps.apientreprise.fr"
+        commentaire.email = "contact@demarches-publiques.fr"
         commentaire.save
       end
     end

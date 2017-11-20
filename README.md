@@ -98,8 +98,8 @@ Pour exécuter les tests de l'application, plusieurs possibilités :
 
 ## Déploiement
 
-- Tout nouveau commit ajouté à la branche `dev` est automatiquement déployé [en intégration](https://tps-dev.apientreprise.fr/)
-- Tout nouveau commit ajouté à la branche `master` est automatiquement déployé [en production](https://tps.apientreprise.fr/)
+- Tout nouveau commit ajouté à la branche `dev` est automatiquement déployé [en intégration](https://dev.demarches-publiques.fr/)
+- Tout nouveau commit ajouté à la branche `master` est automatiquement déployé [en production](https://www.demarches-publiques.fr/)
 
 ## Régénérer les binstubs
 

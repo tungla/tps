@@ -46,7 +46,7 @@ class Admin::ProceduresController < AdminController
     procedure = current_administrateur.procedures.find(params[:id])
     procedure.hide!
 
-    flash.notice = "Procédure supprimée, en cas d'erreur contactez nous : contact@tps.apientreprise.fr"
+    flash.notice = "Procédure supprimée, en cas d'erreur contactez nous : contact@demarches-publiques.fr"
     redirect_to admin_procedures_draft_path
   end
 
