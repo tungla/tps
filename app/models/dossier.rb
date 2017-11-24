@@ -364,11 +364,18 @@ class Dossier < ActiveRecord::Base
   end
 
   def statut
-    if closed?
+    case state
+    when 'draft'
+      'brouillon'
+    when 'initiated'
+      "en construction"
+    when 'received'
+      "en instruction"
+    when 'closed'
       'accepté'
-    elsif without_continuation?
+    when 'without_continuation'
       'classé sans suite'
-    elsif refused?
+    when 'refused'
       'refusé'
     end
   end
