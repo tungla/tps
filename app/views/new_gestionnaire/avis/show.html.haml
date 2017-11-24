@@ -13,7 +13,7 @@
         = render partial: 'new_gestionnaire/dossiers/identite_individual', locals: { individual: @dossier.individual }
 
     .accompagnateur-title Formulaire
-    - champs = @dossier.ordered_champs.decorate
+    - champs = @dossier.ordered_champs
     - if champs.any?
       .card
         = render partial: 'new_gestionnaire/dossiers/champs', locals: { champs: champs }
