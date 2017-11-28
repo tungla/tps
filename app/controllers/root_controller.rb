@@ -32,6 +32,10 @@ class RootController < ApplicationController
       return redirect_to administrations_path
     end
 
+    if Date.today < Date.new(2018, 02, 01)
+      flash.now.notice = ["Téléprocédures Simplifiées change de nom et devient demarches-publiques.fr"]
+    end
+
     render 'landing'
   end
 
