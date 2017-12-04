@@ -44,6 +44,8 @@ class DossierSerializer < ActiveModel::Serializer
       'closed'
     when 'refuse'
       'refused'
+    when 'sans_suite'
+      'without_continuation'
     else
       object.state
     end
