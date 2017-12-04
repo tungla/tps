@@ -68,7 +68,7 @@ module NewGestionnaire
     end
 
     def repasser_en_construction
-      dossier.initiated!
+      dossier.en_construction!
       flash.notice = 'Dossier repassé en construction.'
 
       redirect_to dossier_path(procedure, dossier)
